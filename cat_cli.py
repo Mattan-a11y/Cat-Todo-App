@@ -82,7 +82,6 @@ def todo_list():
         print("Saved! ₍ฅ^>⩊<^ฅ₎⟆")
 
     def load_todo():
-        nonlocal todo
         try:
             loaded_todo = []
             with open('todo.txt', 'r') as f:
