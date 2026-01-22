@@ -10,7 +10,7 @@ A basic command-line todo list with a Pomodoro timer and random cat ASCII art.
 - **Pomodoro Timer:** 25-minute work sessions + 5-minute breaks
 - **Cats:** Prints random cat ASCII art because why not
 - Todos persist between sessions!
-- Added marked todos
+- Added marked todos!
 
 ## How to run
 
