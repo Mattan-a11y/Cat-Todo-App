@@ -33,81 +33,98 @@ title_cat = """
 print(title_cat)
 
 
-def todo_list():
-    todo = []
+def todos_list():
+    todos = []
 
     def print_menu():
         print("\n--------- Menu ----------")
-        print("\n1) Add Todo?")
-        print("2) Show Todo List.")
-        print("3) Remove Todo.")
-        print("4) Save Todo.")
-        print("5) Load Todo file.")
-        print("6) Quit")
+        print("\n1) Add todos?")
+        print("2) Show todos List.")
+        print("3) Remove todos.")
+        print("4) Save todos.")
+        print("5) Load todos file.")
+        print("6) Mark todos")
+        print("7) Quit")
     
-    def add_todo():
-        enter_todo = input("\nEnter task: ")
-        todo.append(enter_todo)
-        print(f"{enter_todo} entered! ₍ฅ^>⩊<^ฅ₎⟆")
+    def add_todos():
+        enter_todos = input("\nEnter task: ")
+        todos.append({"text": enter_todos, "done": False})
+        print(f"{enter_todos} entered! ₍ฅ^>⩊<^ฅ₎⟆")
 
     def show_list():
-        if not todo:
+        if not todos:
             print("List empty.")
         else:
-            index = 0
-            while index < len(todo):
-                print(f"\n{index + 1}. {todo[index]}")
-                index += 1
+            for index, todo in enumerate(todos):
+                status = "✔" if todo["done"] else " "
+                print(f"{index + 1}. [{status}] {todo['text']}")
 
     
-    def remove_todo():
-        if not todo:
+    def remove_todos():
+        if not todos:
             print("Sorry, list empty you can't remove anything yet >^•-•^<")
         else:
             show_list()
             choice = (input("What would you like to remove? "))
             index_to_remove = int(choice) - 1
 
-            if index_to_remove >= 0 and index_to_remove < len(todo):
-                remove_item = todo.pop(index_to_remove)
+            if index_to_remove >= 0 and index_to_remove < len(todos):
+                remove_item = todos.pop(index_to_remove)
                 print(f"Removed: {remove_item}")
             else:
                 print("Invalid. Task does not exist, please try again. ฅ^ >ヮ<^₎")
 
 
-    def save_todo():
-        with open('todo.txt', 'w') as f:
-            for items in todo:
-                f.write(items + '\n')
+    def save_todos():
+        with open('todos.txt', 'w') as f:
+            for todo in todos:
+                done_flag = "1" if todo["done"] else "0"
+                f.write(f"{todo['text']}|{done_flag}\n")
         print("Saved! ₍ฅ^>⩊<^ฅ₎⟆")
 
-    def load_todo():
+    def load_todos():
         try:
-            loaded_todo = []
-            with open('todo.txt', 'r') as f:
+            todos.clear()
+            with open('todos.txt', 'r') as f:
                 for line in f:
-                    loaded_todo.append(line.strip())
-            todo = loaded_todo
+                    text, done_flag = line.strip().split("|")
+                    todos.append({
+                        "text": text,
+                        "done": done_flag == "1"
+                    })
             print("Loaded! ฅ^ >ヮ<^₎")
         except FileNotFoundError:
             print("No saved file found!")
     
-    print("Welcome to Cat Todo List (≽^•⩊•^≼ ₊˚⊹♡)")
+    def mark_todos():
+        show_list()
+        choice = int(input("Mark which todos as done? (number): "))
+        index = choice - 1
+
+        if 0 <= index < len(todos):
+            todos[index]["done"] = True
+            print("Done")
+        else:
+            print("Invalid choice.")
+    
+    print("Welcome to Cat todos List (≽^•⩊•^≼ ₊˚⊹♡)")
     while True:
         print_menu()
         choice = input("> ")
 
         if choice == '1':
-            add_todo()
+            add_todos()
         elif choice == '2':
             show_list()
         elif choice == '3':
-            remove_todo()
+            remove_todos()
         elif choice == '4':
-            save_todo()
+            save_todos()
         elif choice == '5':
-            load_todo()
+            load_todos()
         elif choice == '6':
+            mark_todos()
+        elif choice == '7':
             print("Goodbye (ฅ^ >ヮ<^₎")
             break
         else:
@@ -246,7 +263,7 @@ def cats():
 
 while True:
     print("\n--------- Menu ----------")
-    print("1) Enter Todo List. ദ്ദി/ᐠ｡‸｡ᐟ\ ")
+    print("1) Enter todos List. ദ്ദി/ᐠ｡‸｡ᐟ\ ")
     print("2) Enter Pomodoro Timer. /ᐠ˵- ᴗ -˵マ ᶻ 𝗓 𐰁 ")
     print("3) Print random Cats. ₍₍⚞(˶˃ ꒳ ˂˶)⚟⁾⁾")
     print("4) Quit")
@@ -254,7 +271,7 @@ while True:
     choice = input("\n> ")
 
     if choice == '1':
-        todo_list()
+        todos_list()
     elif choice == '2':
         pomodoro_timer()
     elif choice == '3':
