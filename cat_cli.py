@@ -83,6 +83,7 @@ def todos_list():
         print("Saved! ₍ฅ^>⩊<^ฅ₎⟆")
 
     def load_todos():
+        print("Loading todos from files...")
         try:
             todos.clear()
             with open('todos.txt', 'r') as f:
