@@ -76,6 +76,7 @@ def todos_list():
 
     # Saves todos to a file, one per line
     def save_todos():
+        print("Saving todos to file...")
         with open('todos.txt', 'w') as f:
             for todo in todos:
                 done_flag = "1" if todo["done"] else "0"
