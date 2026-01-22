@@ -74,7 +74,7 @@ def todos_list():
             else:
                 print("Invalid. Task does not exist, please try again. ฅ^ >ヮ<^₎")
 
-
+    # Saves todos to a file, one per line
     def save_todos():
         with open('todos.txt', 'w') as f:
             for todo in todos:
