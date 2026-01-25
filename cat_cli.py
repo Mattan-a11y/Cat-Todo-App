@@ -132,7 +132,7 @@ def todos_list():
         else:
             print("Invalid Input. Please try again!")
 
-# Start a 25-minute Pomodoro work session
+# Start a Pomodoro work session or break session
 def pomodoro_timer():
     print("\n--------- Menu ----------")
     print("1) Pomodoro Start")
@@ -142,7 +142,7 @@ def pomodoro_timer():
     choice = input("\n> ")
 
 
-
+    # Start a 25-minute Pomodoro work session
     def start_25_min():
         seconds_remaining = 1500
 
@@ -156,7 +156,7 @@ def pomodoro_timer():
 
             if seconds_remaining == 0:
                 break 
-    
+    # Start a 5-minute Pomodoro break timer
     def break_timer():
         seconds_remaining = 300
 
