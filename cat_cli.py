@@ -180,7 +180,7 @@ def pomodoro_timer():
     else:
         print("Invalid input. Please try again!")
 
-# Displays a random cat ASCII art
+# Display a random cat ASCII art from the list
 def cats():
     lists_of_cats = [
         """
@@ -257,7 +257,6 @@ def cats():
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠳⠶⠾⠛⠷⣦⣤⣤⣤⡶⠿⣷⣦⣤⣤⣤⣤⣤⣤⣤⣤⡶⠶⠞⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """
     ]
-
     print(random.choice(lists_of_cats))
 
 
