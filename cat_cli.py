@@ -48,6 +48,8 @@ def todos_list():
         print("6) Mark todos")
         print("7) Quit")
     
+
+    # Add a new todo item with done=False
     def add_todos():
         enter_todos = input("\nEnter task: ")
         todos.append({"text": enter_todos, "done": False})
