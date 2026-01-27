@@ -1,7 +1,9 @@
 import time
 import random
 
-
+"""
+Cat Todo CLI App - A simple todo list with Pomodoro timer and ASCII cats
+"""
 
 title_cat = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
