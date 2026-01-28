@@ -63,7 +63,7 @@ def todos_list():
                 status = "✔" if todo["done"] else " "
                 print(f"{index + 1}. [{status}] {todo['text']}")
 
-    
+    #Removes a todo item by index number
     def remove_todos():
         if not todos:
             print("Sorry, list empty you can't remove anything yet >^•-•^<")
