@@ -55,6 +55,7 @@ def todos_list():
         todos.append({"text": enter_todos, "done": False})
         print(f"{enter_todos} entered! ₍ฅ^>⩊<^ฅ₎⟆")
 
+    # Displays all todos with their completion status
     def show_list():
         if not todos:
             print("List empty.")
