@@ -103,6 +103,7 @@ def todos_list():
         except FileNotFoundError:
             print("No saved file found!")
     
+    # Mark a todos as completed by index number
     def mark_todos():
         show_list()
         choice = int(input("Mark which todos as done? (number): "))
