@@ -38,6 +38,7 @@ print(title_cat)
 def todos_list():
     todos = []
 
+    # Displays the main menu options
     def print_menu():
         print("\n--------- Menu ----------")
         print("\n1) Add todos?")
