@@ -89,6 +89,7 @@ def todos_list():
                 f.write(f"{todo['text']}|{done_flag}\n")
         print("Saved! ₍ฅ^>⩊<^ฅ₎⟆")
 
+    #Loads todos from a file
     def load_todos():
         print("Loading todos from files...")
         try:
