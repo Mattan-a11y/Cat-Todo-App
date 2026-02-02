@@ -34,7 +34,7 @@ title_cat = """
 """
 print(title_cat)
 
-
+#Runs and interacttive todo list manager
 def todos_list():
     todos = []
 
