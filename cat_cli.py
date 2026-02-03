@@ -140,7 +140,7 @@ def todos_list():
         else:
             print("Invalid Input. Please try again!")
 
-# Start a Pomodoro work session or break session
+#Run's the pomodoro timer menu
 def pomodoro_timer():
     print("\n--------- Menu ----------")
     print("1) Pomodoro Start")
