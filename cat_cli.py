@@ -150,7 +150,7 @@ def pomodoro_timer():
     choice = input("\n> ")
 
 
-    # Start a 25-minute Pomodoro work timer
+    # Start a 25-minute work timer
     def start_25_min():
         seconds_remaining = 1500
 
@@ -164,7 +164,7 @@ def pomodoro_timer():
 
             if seconds_remaining == 0:
                 break 
-    # Start a 5-minute Pomodoro break timer
+    # Start a 5-minute break timer
     def break_timer():
         seconds_remaining = 300
 
