@@ -1,5 +1,6 @@
 # import modules for timings and randomness
 import time
+# import random for cat selection
 import random
 
 """
