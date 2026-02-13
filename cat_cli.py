@@ -43,6 +43,8 @@ print(title_cat)
 
 #Runs and interacttive todo list manager
 def todos_list():
+
+    # Initialize empty todo list
     todos = []
 
     # Displays the main menu options
