@@ -156,6 +156,7 @@ def pomodoro_timer():
     print("2) Pomodoro Break")
     print("3) Leave Pomodoro Timer")
 
+    # Get user choice for timer
     choice = input("\n> ")
 
 
