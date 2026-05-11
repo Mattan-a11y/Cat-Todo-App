@@ -1,18 +1,42 @@
-A simple CLI todo list with Pomodoro timer and random ASCII cats. 
+# cat-todo-app
 
-# Cat Todo App 🐱
+A terminal todo list with a built-in Pomodoro timer and ASCII cats. Written in Python.
 
-A basic command-line todo list with a Pomodoro timer and random cat ASCII art.
+## Requirements
 
-## What it does
+Python 3.x, nothing else.
 
-- **Todo List:** Add, view, and remove tasks
-- **Pomodoro Timer:** 25-minute work sessions + 5-minute breaks
-- **Cats:** Prints random cat ASCII art because why not
-- Todos persist between sessions!
-- Added marked todos!
-
-## How to run
+## Usage
 
 ```bash
-python cat_cli.py
+python3 cat_todo.py
+```
+
+You'll get a menu with three options: the todo list, the Pomodoro timer, or a random cat.
+
+## Features
+
+**Todo list**
+- Add, remove, and mark tasks as done
+- Save to and load from a local file (`todos.txt`)
+
+**Pomodoro timer**
+- 25-minute work session
+- 5-minute break
+
+**Cats**
+- Prints a random ASCII cat
+- Very important feature
+
+## Notes
+
+- The timer blocks the program while running — you can't cancel mid-session without killing the script
+- Todos are saved to `todos.txt` in the same directory you run the script from
+
+## License
+
+MIT
+
+## Author
+
+[@Mattan-a11y](https://github.com/Mattan-a11y) · [LinkedIn](https://www.linkedin.com/in/matin-shahid-1b426a217/)
